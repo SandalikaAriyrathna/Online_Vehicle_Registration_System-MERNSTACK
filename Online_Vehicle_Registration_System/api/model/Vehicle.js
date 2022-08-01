@@ -7,10 +7,6 @@ const VehicleSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    liciense_type: {
-      type: String,
-      required: true,
-    },
     liciense_plate: {
         type: String,
         required: true,
