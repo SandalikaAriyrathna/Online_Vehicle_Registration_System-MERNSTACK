@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const cors=require("cors");
+const VehicleRoute = require("./routes/vehicle");
 
-const VehicleRoute = require("./routes/vehicles");
+const cors=require("cors");
 
 const corsOptions ={
    origin:'*', 
@@ -26,7 +26,7 @@ mongoose
 .then(console.log("Connected to MongoDB"))
 .catch((err) => console.log(err));
 
-app.use("/api/vehicles", VehicleRoute);
+app.use("/api/vehicle", VehicleRoute);
 
 app.listen("5000", () => {
     console.log("Backend is running.");

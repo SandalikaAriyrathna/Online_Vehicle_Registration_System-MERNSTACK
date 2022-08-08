@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "online vehicle registration system",
   "main": "index.js",
-  "author": "Sandalika Ariyarathna",
+  "author": "Mokshika",
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js"
