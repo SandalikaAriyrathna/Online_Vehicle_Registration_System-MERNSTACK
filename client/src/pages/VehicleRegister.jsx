@@ -20,10 +20,7 @@ export default function VehicleRegister() {
 
   const navigate = useNavigate();
 
-  const handleProceed = (e) => {
-    
-    vid && navigate(generatePath("/vehicledetails/:vid", { vid }));
-  };
+ 
 
   
   const userData ={
@@ -50,16 +47,12 @@ export default function VehicleRegister() {
         setName("");
         setContactNumber("");
         swal({ text: "Successfully Added", icon: "success", button: "Okay!"}).then((res)=>{
-          navigate(`/register/${response.data.vid}`,{replace:true});
+          navigate(`/vehicledetails/${response.data.vid}`,{replace:true});
         })
-        // window.location.replace(`/vehicledetails/${vid}`);
        
         console.log(response.data)
       })
-      // .catch(function (error) {
-      //   console.log(error);
-      //   alert("not added");
-      // });
+     
     }
     
   }
@@ -113,7 +106,7 @@ export default function VehicleRegister() {
                     <br/>
                   </div>
                
-                  <Button variant="primary" type="submit"  onClick={ submitForm}  style={{height:"40px", width:"100%",}}>
+                  <Button variant="primary" type="submit"  onClick={submitForm}  style={{height:"40px", width:"100%",}}>
                      Submit
                   </Button>
                  

@@ -19,13 +19,6 @@ export default function VehicleDetails(props) {
   const [contact_number, setContactNumber] = useState("");
   const [license_type, setLicenseType] = useState("");
 
-  // const [data, setData] = useState([]);
-  
-
-  // useEffect(async()=>{
-  //     let result = await fetch("http://localhost:8000/api/vehicle/"+props.match.params.id)
-  //     console.log(result)
-  // },[])
 
   // Get ID from URL
 const params = useParams();

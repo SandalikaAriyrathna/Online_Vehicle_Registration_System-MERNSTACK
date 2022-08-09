@@ -78,7 +78,7 @@ export default function UpdateModel(props) {
                 setContactNumber('');
                 setShow(false);
                 swal({ text: "Vehicle Successfully Updated", icon: "success", button: "Okay!" }).then((value) => {
-                    window.location.replace(`/register/${response.data.vid}`,{replace:true});
+                    window.location.replace(`/vehicledetails/${response.data.vid}`,{replace:true});
                 });
               
             })
