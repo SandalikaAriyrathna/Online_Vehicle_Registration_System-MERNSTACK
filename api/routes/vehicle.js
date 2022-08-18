@@ -12,7 +12,7 @@ const inputValidate = (numPlate) => {
   let isTrue = false;
   let pr = ['WP', 'NW'];
   for (var i = 0; i < numArr.length; i++) {
-    if (numArr[i] === 'S' && numArr[i + 1] === 'R' && numArr[i + 2] === 'I') {
+    if (numArr[0].match(/[1-9]/i) && numArr[1].match(/[0-9]/i) && numArr[2] === 'S' && numArr[ 3] === 'R' && numArr[ 4] === 'I') {
       type = 'Vintage';
     }
     if (numArr[i].match(/[A-Z]/i)) {
